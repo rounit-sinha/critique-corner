@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="new.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+    body{
+        background-image: url(../assets/public/Lovepik_com-400338452-ins-minimalist-background.png);
+        background-size: cover;
+        background-position: center;
+        height: calc(100vh - 60px);    
+    }   
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html"><img src="../assets/personal/PikPng.com_house-icon-png_531531.png" height="50px"></a></li>
+                <li class="start-btn">
+                    <a href="getstarted.html">Get Started</a> 
+                </li>
+                <li>
+                  <a href="login.html">Admin Login</a>
+              </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+      </header>
+
+    <div class="feedback-form">
+        <h2>Feedback Form</h2>
+        <form id="feedback-form">
+            <input type="hidden" id="feedback-for" name="feedback_for" value="Products">
+            <input type="hidden" id="category" name="category" value="">
+            <div class="input">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input">
+                <label for="brand-name">Brand Name:</label><br>
+                <input type="text" id="brand-name" name="brand-name" required>
+            </div>
+            <div class="input">
+                <label for="feedback">Feedback:</label><br>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            </div>
+            <div class="rating">
+                <label for="rating">Rating:</label><br>
+                <fieldset class="stars">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars"></label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"></label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"></label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"></label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"></label>
+                </fieldset>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+    <script src="feedback.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const feedbackForm = document.getElementById('feedback-form');
+    const submitButton = feedbackForm.querySelector('button[type="submit"]');
+
+    feedbackForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+
+        fetch('/submit-feedback', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(Object.fromEntries(formData))
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            // Handle success or error response
+        })
+        .catch(error => {
+            console.error('Error submitting feedback:', error);
+            // Handle error
+        });
+    });
+    function displaySuccessMessage() {
+        const successMessage = document.createElement('p');
+        successMessage.textContent = 'Feedback submitted. Thank you!';
+        successMessage.classList.add('success-message');
+        feedbackForm.appendChild(successMessage);
+    }
+});
+
+    </script>
+</body>
+</html>

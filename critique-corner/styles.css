@@ -1,0 +1,229 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header{
+    position: fixed;
+    background-color: #DC5F00;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 30px;
+    z-index: 1;
+}
+
+nav{
+    text-align: right;
+}
+
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav ul li{
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li:first-child{
+    margin-top: 70px;
+    margin-right: 60%;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    font-family: "Rubik", sans-serif;
+}
+.main{
+    text-align: center;
+}
+
+.hero{
+    position: relative;
+    color: black;
+    padding: 100px 0;
+    background-image: url(./assets/personal/meetingteam.jpg);
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 60px);    
+}
+
+.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(red, green, blue, alpha);
+}
+
+
+.hero-content{
+    padding-top: 12%;
+    position:static;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1{
+    font-size: 70px;
+    margin-bottom: 20px;
+    font-family: "Rubik", sans-serif;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+#typewriter{
+    color: #BE3030;
+    overflow: hidden;
+    border-right: 0.1em solid orange; 
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.01em; 
+    animation: typing 3s steps(40) infinite alternate;
+}
+
+.hero p{
+    font-size: 40px;
+    font-family: "Rubik", sans-serif;
+}
+
+.container {
+    padding-top: 12%;
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    background-color: #ff730028;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    padding-top: 20px;
+    height: 200px;
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Rubik", sans-serif;
+}
+
+.login {
+    max-width: 500px;
+    max-height: 500px;
+    margin: 100px auto;
+    margin-top: 15%;
+    padding: 20px;
+    background-color: #ff730028;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Rubik", sans-serif;
+}
+.login h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #BE3030;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Rubik", sans-serif;
+}
+
+button:hover {
+    background-color: #be303071;
+}
+.contact{
+    text-align: center;
+    margin-top: 9%;
+    font-family: "Rubik", sans-serif;
+}
+.contact h1{
+    font-size: 70px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.contact h1 span{
+    color: #BE3030;
+}
+.contact .reach{
+    font-size: 40px;
+    font-weight: bold;
+}
+.contact p{
+    font-size: 30px;
+}
+.contact p span{
+    color: #BE3030;
+}
+footer {
+    font-size: 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 1px;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+}
+
+.footer {
+    max-width: 1200px;
+    margin: auto auto 0%;
+    padding: 1px;
+}

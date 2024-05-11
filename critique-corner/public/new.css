@@ -1,0 +1,164 @@
+/* Add your CSS styles here */
+header{
+    position: fixed;
+    background-color: #DC5F00;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 30px;
+    z-index: 1;
+}
+
+/* Navigation bar styles */
+
+nav{
+    text-align: right;
+}
+
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav ul li{
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li:first-child{
+    margin-top: 70px;
+    margin-right: 60%;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    font-family: "Rubik", sans-serif;
+}
+
+/* Category list styles */
+.category-container {
+    text-align: center;
+    margin-top: 10%;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.category-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.category-item {
+    display: inline-block;
+    background-color: #ff730028;
+    font-size: 25px;
+    font-family: "Rubik", sans-serif;
+    border-radius: 5px;
+    padding: 20px 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+    transform: scale(1.02);
+}
+
+.category-container h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: "Rubik", sans-serif;
+}
+.category-container h2 span{
+    color: #BE3030;
+}
+
+/* styles.css */
+
+form {
+    padding-top: 20px;
+    max-width: 500px;
+    margin: 50px auto;
+    margin-top: 2%;
+    padding-bottom: 20px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5%; 
+    background-color: #ff730028;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-family: "Rubik", sans-serif;
+    font-size: 30px;
+}
+.feedback-form h2{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10%;
+    color: black;
+    z-index: 1;
+    font-family: "Rubik", sans-serif;
+}
+
+/* styles.css */
+.input input{
+    font-size: 20px;
+}
+.input #feedback{
+    font-size: 20px;
+}
+button{
+    width: 25%;
+    padding: 10px;
+    background-color: #BE3030;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Rubik", sans-serif;
+}
+button:hover {
+    background-color: #be303071;
+}
+button[type="submit"].submitted:hover {
+    background-color: #be303071;
+}
+.success-message {
+    color: green;
+    margin-top: 0;
+    z-index: 1;
+}
+.rating {
+    padding-top: 10px;
+    align-items: center;
+}
+
+.stars {
+    display: inline-block;
+    padding-top: 2px;
+    border: 0;
+}
+
+.stars input[type="radio"] {
+    display: none;
+}
+
+.stars label {
+    font-size: 60px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.stars label::before {
+    content: '\2605'; /* Unicode character for a star */
+}
+
+.stars input[type="radio"]:checked ~ label {
+    color: #DC5F00;
+}
